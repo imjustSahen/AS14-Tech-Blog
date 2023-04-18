@@ -1,6 +1,7 @@
-<section class="cheers-container">
-    <div class="cheers-content">
-        <h2>We love beer and food.</h2>
-        <p>"Great beer and delicious food - a perfect pairing for those who love to savor life's flavors!"</p>
-    </div>
-</section>
+<ul class="post-list">
+    {{#each posts as |post|}}
+    <li>
+        {{> post-info post }}
+    </li>
+    {{/each}}
+</ul>

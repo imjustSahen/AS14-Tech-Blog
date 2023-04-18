@@ -1,19 +1,19 @@
 const sequelize = require("../config/connection");
-const seedUsers = require("./userSeeds");
-const seedPairings = require("./pairingSeeds");
-const seedReviews = require("./reviewSeeds");
-const seedComments = require("./commentSeeds");
+const seedUsers = require("./userSeeds.json");
+const seedBlogs = require("./blogSeeds.json");
+// const seedReviews = require("./reviewSeeds");
+// const seedComments = require("./commentSeeds.json");
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedUsers();
 
-  await seedPairings();
+  await seedBlogs();
 
-  await seedReviews();
+  // await seedReviews();
 
-  await seedComments();
+  // await seedComments();
 
   process.exit(0);
 };
