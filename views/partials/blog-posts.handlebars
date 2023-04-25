@@ -2,16 +2,16 @@
     <div class="whole-post">
         <div class="info-section">
             <div class="post-name">
-                <a href="/post/{{id}}" class="links">{{title}}</a>
+                <a href="/blog/{{blogs.id}}" class="links">{{blogs.title}}</a>
             </div>
             <div class="created-by">
                 <p id="comment-subtitle">
-                    Posted by <b>{{user.username}} </b> on <b>{{formatDate created_at}}</b>
+                    Posted by <b>{{user.email}} </b> on <b>{{date_created}}</b>
                 </p>
             </div>
         </div>
         <div class="content-section">
-            <p>{{content}}</p>
+            <p>{{blogs.content}}</p>
         </div>
     </div>
 </article>

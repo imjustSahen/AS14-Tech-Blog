@@ -1,20 +1,14 @@
-<section class="new-post-section">
-    <button type="submit" class="btn" id="create-new-post">+ Create new post</button>
-</section>
+<header class="container">
+    <h1 class="text-container-header" id="title">{{userData.email}}'s blogs</h1>
+</header>
+<br>
+<div class="blog-list">
+    {{> user-blog}}
+</div>
+<div class="create-blog">
+    <a href="/dashboard/blog">
+        <button type="button" class="btn btn-primary submit-btn" id="">Create new blog!</button>
+    </a>
+</div>
 
-
-{{#if posts.length}}
-<section>
-    <h2>Your Dashboard</h2>
-    <ul class="post-list">
-        {{#each posts as |post|}}
-        <li>
-            {{post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">edit post</a>
-        </li>
-        {{/each}}
-    </ul>
-</section>
-{{/if}}
-
-<script src="/js/create-post.js"></script>
+<script src="/js/dashboard.js"></script>

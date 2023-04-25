@@ -4,9 +4,8 @@ const userRoutes = require("./user");
 const blogRoutes = require("./blog");
 const commentRoutes = require("./comment");
 
-//localhost:3001/api
-router.use("/user", userRoutes);
-router.use("/blog", blogRoutes);
-router.use("/comment", commentRoutes);
+router.use("/users", userRoutes);
+router.use("/blogs", blogRoutes);
+router.use("/comments", commentRoutes);
 
 module.exports = router;
